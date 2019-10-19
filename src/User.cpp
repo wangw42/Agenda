@@ -1,0 +1,50 @@
+#include "User.hpp"
+
+
+User:: User(const std::string &t_userName, const std::string &t_userPassword,
+       const std::string &t_userEmail, const std::string &t_userPhone){
+    this->m_name = t_userName;
+    this->m_password = t_userPassword; 
+    this->m_email = t_userEmail;
+    this->m_phone = t_userPhone;
+};
+
+User:: User(const User &t_user){
+    this->m_name = t_user.getName();
+    this->m_password = t_user.getPassword();
+    this->m_email = t_user.getEmail();
+    this->m_phone = t_user.getPhone();
+};
+
+std::string User:: getName() const{
+    return m_name;
+};
+
+
+void User:: setName(const std::string &t_name){
+    this->m_name = t_name;
+};
+
+std::string User:: getPassword() const{
+    return m_password;
+};
+
+void User:: setPassword(const std::string &t_password){
+    this->m_password = t_password;
+};
+
+std::string User:: getEmail() const{
+    return m_email;
+};
+
+void User:: setEmail(const std::string &t_email){
+    this->m_email = t_email;
+};
+
+std::string User:: getPhone() const{
+    return m_phone;
+};
+
+void User:: setPhone(const std::string &t_phone){
+    this->m_phone = t_phone;
+};
